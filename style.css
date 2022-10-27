@@ -13,3 +13,6 @@ body {
     border-style: solid;
     border-radius: 100%;
 }
+p {
+    visibility: hidden;
+}

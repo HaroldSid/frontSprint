@@ -6,33 +6,156 @@ const randomN = (min, max) => {
     return n;
 }
 
+
+
 //!!!!!!! Dates
-let today = new Date();
-const dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = today.getFullYear();
-today = mm + '/' + dd + '/' + yyyy;
 
-dateN = Date.now();
-let time = Math.floor(Date.now() / 1000);
-let sec = time % 60;
-let min = ((time -sec) / 60) % 60;
-let hour = (((time - sec - 60 * min) / 60) / 60) % 24;
+// let dateTest = new Date;
+// const inputHour = document.querySelector(".hourIn");
+// const outputHour = document.querySelector(".hourOut");
 
-// Anchorage (USA) UTC−8
-const timeAnc = document.querySelector(".anchorage")
+// console.log(dateTest)
 
-const timeAncRel = () => {
-    console.log(hour + "h" + min + "m" + sec + "s");
-    console.log(today)
-}
+// const findDate = (heure) => {
 
-setInterval(timeAncRel, 1000);
-//Reykjavik (Iceland) UTC+0
+//     let tomorrow = new Date;
+//     const today = new Date();
 
-//Brussel UTC+2
+//     tomorrow.setTime(tomorrow.getTime() + heure * 3600 * 1000);
+//     outputHour.textContent = tomorrow;
+//     console.log(tomorrow.getHours() + ":" + tomorrow.getMinutes() + " " + tomorrow.getDate() + "/" + (tomorrow.getMonth() + 1) + "/" + tomorrow.getFullYear());
+// };
 
-//Saint-Petersburg (Russia) UTC+3
+// inputHour.addEventListener("keyup", ()=>{findDate(inputHour.value)})
+
+// // anniversaire
+
+// const inputDate = document.querySelector(".dateIn");
+// const butDate = document.querySelector(".okDate");
+// let annif = new Date("1993, 06, 28");
+// let today = Date.now() - annif.getTime();
+// let date = new Date;
+// let dd = String(date.getDate());
+// let time = Math.floor(today / 1000);
+// let sec = time % 60;
+// let min = ((time - sec) / 60) % 60;
+// let hour = (((time - sec - 60 * min) / 60) / 60) % 24;
+// let day = (((time - sec - 60 * min - 3600 * hour) / 60) / 60) / 24;
+// inputDate.value = "1993, 06, 28";
+
+// const getDays = (date) => {
+//     let dateT = new Date(date);
+//     console.log(dateT)
+//     let today = Date.now() - dateT.getTime();
+//     let time = Math.floor(today / 1000);
+//     let sec = time % 60;
+//     let min = ((time - sec) / 60) % 60;
+//     let hour = (((time - sec - 60 * min) / 60) / 60) % 24;
+//     let day = (((time - sec - 60 * min - 3600 * hour) / 60) / 60) / 24;
+//     console.log(day)
+// }
+
+// butDate.addEventListener("click", () => { getDays(inputDate.value) });
+
+
+// // Anchorage (USA) UTC−8
+// const timeAnc = document.querySelector(".anchorage")
+
+// const timeAncRel = () => {
+//     let today = new Date();
+//     let dd = String(today.getDate()).padStart(2, '0');
+//     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+//     let yyyy = today.getFullYear();
+
+//     let dateN = Date.now();
+//     let time = Math.floor(dateN / 1000);
+//     let sec = time % 60;
+//     let min = ((time - sec) / 60) % 60;
+//     let hour = ((((time - sec - 60 * min) / 60) / 60) % 24) - 8;
+//     if (hour < 0) {
+//         hour = 24 + hour;
+//         dd = dd - 1;
+//     }
+//     today = dd + '/' + mm + '/' + yyyy;
+//     timeAnc.textContent ="A Anchorage nous sommes le " + today + " il est"+ hour + "h" + min + "m" + sec + "s";
+// }
+
+// setInterval(timeAncRel, 1000);
+// //Reykjavik (Iceland) UTC+0
+
+// const timeRey = document.querySelector(".reykjavik")
+
+// const timeReyRel = () => {
+//     let today = new Date();
+//     let dd = String(today.getDate()).padStart(2, '0');
+//     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+//     let yyyy = today.getFullYear();
+
+//     let dateN = Date.now();
+//     let time = Math.floor(dateN / 1000);
+//     let sec = time % 60;
+//     let min = ((time - sec) / 60) % 60;
+//     let hour = ((((time - sec - 60 * min) / 60) / 60) % 24);
+//     if (hour < 0) {
+//         hour = 24 + hour;
+//         dd = dd - 1;
+//     }
+//     today = dd + '/' + mm + '/' + yyyy;
+//     timeRey.textContent = "A Reykjavik nous sommes le " + today + " il est" + hour + "h" + min + "m" + sec + "s";
+// }
+
+// setInterval(timeReyRel, 1000);
+
+// //Brussel UTC+2
+
+// const timeBru = document.querySelector(".brussel")
+
+// const timeBruRel = () => {
+//     let dateF = Math.floor(Date.now()/1000)
+//     let today = new Date();
+//     let dd = String(today.getDate()).padStart(2, '0');
+//     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+//     let yyyy = today.getFullYear();
+
+//     let dateN = Date.now();
+//     let time = Math.floor(dateN / 1000);
+//     let sec = time % 60;
+//     let min = ((time - sec) / 60) % 60;
+//     let hour = ((((time - sec - 60 * min) / 60) / 60) % 24) + 2;
+//     if (hour < 0) {
+//         hour = 24 + hour;
+//         dd = dd - 1;
+//     }
+//     today = dd + '/' + mm + '/' + yyyy;
+//     timeBru.textContent = "A Bruxelles nous sommes le " + today + " il est" + hour + "h" + min + "m" + sec + "s";
+// }
+
+// setInterval(timeBruRel, 1000);
+
+// //Saint-Petersburg (Russia) UTC+3
+
+// const timePet = document.querySelector(".saintPetersburg")
+
+// const timePetRel = () => {
+//     let today = new Date();
+//     let dd = String(today.getDate()).padStart(2, '0');
+//     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+//     let yyyy = today.getFullYear();
+
+//     let dateN = Date.now();
+//     let time = Math.floor(dateN / 1000);
+//     let sec = time % 60;
+//     let min = ((time - sec) / 60) % 60;
+//     let hour = ((((time - sec - 60 * min) / 60) / 60) % 24) + 3;
+//     if (hour < 0) {
+//         hour = 24 + hour;
+//         dd = dd - 1;
+//     }
+//     today = dd + '/' + mm + '/' + yyyy;
+//     timePet.textContent = "A Saint Petersburg nous sommes le " + today + " il est" + hour + "h" + min + "m" + sec + "s";
+// }
+
+// setInterval(timePetRel, 1000);
 
 
 //!!!!!!! Moles
